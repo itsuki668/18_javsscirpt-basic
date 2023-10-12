@@ -81,3 +81,24 @@ cosole.log(n2);
 let n3 = 5;
 n3++;//インクリメント　１足す
 ```
+
+### ul要素を取り入れ
+```js
+const element = document.querySelector("ul");
+console.log(element);
+
+//selectorってCSSのセレクターなので、
+const element2 = document.querySelector("#fruitslist");
+console.log(element2);
+
+//classもいける？
+const element3 = document.querySelector(".listbox_list");
+console.log(element3);
+
+//新しい要素を作る。
+const lilast = document.createElement("li");
+
+console.dir(lilast); //dirに変更。オブジェクトの中身が見れる。
+lilast.textContent = "メロン";
+console.log(lilast);
+```
