@@ -103,7 +103,7 @@ lilast.textContent = "メロン";
 console.log(lilast);
 ```
 
-##　10月　19日
+##  10月１９日
 
 - for文（繰り返し文）
 - コレクション（配列）
