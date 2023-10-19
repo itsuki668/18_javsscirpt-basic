@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson</title>
+</head>
+<doby>
+    <dl class="recipe">
+        <dt>カップヌードルの作り方</dt>
+        <dd>フタを途中まで開ける</dd>
+        <dd>お湯を線まで入れてフタをする</dd>
+    </dl>
+    <script>
+        const element = document.querySelector(".recipe"); //dl要素を取り入れる　
+        console.log(element);
+
+        const lilast = document.createElement("dd"); //ddの要素を追加する
+        console.dir(lilast);
+        lilast.textContent = "3分待ってできあがり"; //ddの中に文字を入れる
+        console.log(lilast);
+
+        element.appendChild(lilast);
+
+
+        for (let i = 0; i < 9; i++) {
+            console.log(i)
+            console.log(i + 1);
+            console.log(`7 × ${i + 1} = ${7 * (i + 1)}`);
+        }
+    </script>
+</doby>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sample4-14</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <h1>人気フルーツ一覧</h1>
+  <ul id="fruitslist" class="listbox__list"></ul>
+  <script>
+    //ulの中に果物一覧を一度に入れたい。
+    //配列fruitsを宣言・値を代入
+    const fruits = ["りんご", "もも", "バナナ"];
+
+
+    //ulをJavaScript空間に引きずり込む
+    const element = document.querySelector("#fruitslist li a");
+    console.log(element);
+
+    //fruitsの要素数文だけfor文で回す。
+    for (let i = 0; i < fruits.length; i++) {
+      //liを創出する。
+      const lilast = document.createElement("li");
+
+      //liに値（果物→配列fruitsの中にある。）を代入
+      console.log(fruits[i]);//りんご、もも、バナナが取れる。
+      //創出したliの内容に果実を代入
+      lilast.textContent = fruits[i];
+      //element(ul)の中に最後に追加
+      element.appendChild(lilast);
+    }
+  </script>
+</body>
+
+</html>

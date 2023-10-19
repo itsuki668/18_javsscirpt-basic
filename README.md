@@ -102,3 +102,96 @@ console.dir(lilast); //dirに変更。オブジェクトの中身が見れる。
 lilast.textContent = "メロン";
 console.log(lilast);
 ```
+
+##　10月　19日
+
+- for文（繰り返し文）
+- コレクション（配列）
+
+### lastに２つの文字を加える
+
+ ```html
+ <h1>果物の種類</h1>
+<ul id="fruitslist" class="listbox__list">
+    <li>りんご</li>
+    <li>みかん</li>
+    <li>バナナ</li>
+</ul>
+<!--リストを操作するDOM操作のスクリプト-->
+<script>
+    //メロンを加えたい。
+    //ul要素を取り入れる。
+    const element = document.querySelector("ul");
+    console.log(element);
+    //selectorってCSSのセレクターなので、
+    const element2 = document.querySelector("#fruitslist");
+    console.log(element2);
+    //classもいける？
+    const element3 = document.querySelector(".listbox_list");
+    console.log(element3);
+    //新しい要素を作る。
+    const lilast = document.createElement("li");
+    console.dir(lilast); //dirに変更。オブジェクトの中身が見れる。
+    lilast.textContent = "メロン";
+    console.log(lilast);
+    //リストの最後に追加する。↑<li>メロン</li>を変数element内の<ul></ul>に追加する。
+    //メロンの下にいちごを加える
+    const lilast2 = document.createElement("li");
+    element.appendChild(lilast);
+    lilast2.textContent = "いちご";
+    element.appendChild(lilast2);
+</script>
+ ```
+
+ ### for文を使い繰り返し文を作る
+ ```js
+ for (let i = 0; i < 4; i++) {
+    //繰り返しの処理を入れていく。
+    //0~3を表示したい。
+    console.log(i);
+}
+const name_list = ["松田", "田中", "中山", "山本", "本田"]
+console.log(name_list);
+//山本がほしい。
+console.log(name_list[3]);
+for (i = 0; i < 5; i++) {
+    console.log(i);
+    console.log(name_list[i]);
+}
+ ```
+
+### for文を使い７の九九を実行
+
+ ```js
+ for (let i = 0; i < 9; i++) {
+    console.log(i)
+    console.log(i + 1);
+    console.log(`7 × ${i + 1} = ${7 * (i + 1)}`);
+}
+ ```
+
+ ### lastからulのなかの要素を出しulのなかに新しい要素を入れる
+ ```html
+ <h1>人気フルーツ一覧</h1>
+<ul id="fruitslist" class="listbox__list"></ul>
+
+<script>
+  //ulの中に果物一覧を一度に入れたい。
+  //配列fruitsを宣言・値を代入
+  const fruits = ["りんご", "もも", "バナナ"];
+  //ulをJavaScript空間に引きずり込む
+  const element = document.querySelector("#fruitslist li a");
+  console.log(element);
+  //fruitsの要素数文だけfor文で回す。
+  for (let i = 0; i < fruits.length; i++) {
+    //liを創出する。
+    const lilast = document.createElement("li");
+    //liに値（果物→配列fruitsの中にある。）を代入
+    console.log(fruits[i]);//りんご、もも、バナナが取れる。
+    //創出したliの内容に果実を代入
+    lilast.textContent = fruits[i];
+    //element(ul)の中に最後に追加
+    element.appendChild(lilast);
+  }
+</script>
+ ```
