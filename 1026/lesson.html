@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演習</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .text {
+            color: red;
+
+        }
+
+        .text.blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="text"><span>色の名前</span>です。</p>
+
+    <button class="red">赤色</button>
+    <button class="blue">青色</button>
+    <button class="yellow">黄色</button>
+    <script>
+        //文字の色を変えてみましょう。
+        //ボタンを取得する
+        const redBtn = document.querySelector(".red");
+        const blueBtn = document.querySelector(".blue");
+        const yellowdBtn = document.querySelector(".yellow");
+
+
+        //文字を取得する
+        const text = document.querySelector(".text");
+        const textSpan = document.querySelector(".text span")
+
+        //ボタンにClikイベントを設定する。
+        redBtn.addEventListener("click", function () {
+            console.dir("text");
+            text.style.color = "red";
+            textSpan.fontSize = "50px"
+            textSpan.innerText = "赤色"
+        })
+
+        //青
+        blueBtn.addEventListener("click", function () {
+            console.dir("text");
+            text.style.color = "blue";
+            textSpan.innerText = "青色"
+        })
+        //黄色
+
+        yellowdBtn.addEventListener("click", function () {
+            console.dir("text");
+            text.style.color = "yellow";
+            textSpan.innerText = "黄色"
+        })
+    </script>
+    <script>
+        //スクロールされるたびにconsoleに「スクロールされました」と表示されるプログラムを書いてください。
+        //windowのしごとです。
+        window.addEventListener("scroll", function () {
+            console.log("スクロールされました。")
+        })
+    </script>
+
+</body>
+
+</html>

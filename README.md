@@ -195,3 +195,142 @@ for (i = 0; i < 5; i++) {
   }
 </script>
  ```
+
+ ##  10月26日
+ ```html
+ <section>
+  <h1>犬のギャラリー</h1>
+  <div class="card1">
+    <h2>柴犬の散歩</h2>
+    <p>雨だったけど、散歩に連れて行った</p>
+  </div>
+  <div class="card2">
+    <h2>秋田犬の寝顔</h2>
+    <p>普段は不細工だけど、寝顔はかわいい</p>
+  </div>
+  <img src="images/dog001.png" alt="柴犬" id="pochi"
+class="shibaDog" />
+  <img src="images/dog002.png" alt="秋田犬" id="hachiko"
+class="akitaDog" />
+</section>
+<script>
+  //ここに記述していきます
+  //柴犬と秋田犬の画像を取得
+  const pochi = document.querySelector('#pochi');
+  const hachiko = document.querySelector("#hachiko");
+  //柴犬カードに柴犬の画像（変数）を挿入する
+  const pochisCard = document.querySelector(".card1");
+  pochisCard.appendChild(pochi);
+  //秋田犬カードに秋田犬の画像を挿入する
+  const hachikoCard = document.querySelector(".card2");
+  hachikoCard.appendChild(hachiko);
+</script>
+<script>
+  //両方とも秋田犬にする。
+  const shibainu = document.querySelector(".sibaDog");
+  shiba.setAttribute("src", "imges/dog002.png");
+  //Attributeは属性という意味
+</script>
+ ```
+
+ ```html
+ <button id="btn" onclick="alert('クリックされました！')">ハン
+ドラを起動する</button>
+<button id="nonFunc">関数を使わない</button>
+<script>
+    const btn = document.querySelector("#btn");
+    console.log(btn);
+    //感想を定義
+    function showMessage() {
+        alert("イベントが発生しました。")
+    }
+    //イベント
+    //何を何をしたら、どうなる。
+    //「ボタン」に「クリック」したら、「アラートが出る」
+    btn.addEventListener("click", showMessage);
+    //加える＋イベント＋リスト　
+    //関数を使わない
+    const nonFuncBtn = document.querySelector("#nonFunc");
+    nonFuncBtn.addEventListener("click", function () {
+        alert("関数を使わないボタンをクリック");
+    });
+    //例）「ブラウザで発生する主なイベント」から"resize"（サイズが
+変更する）タイミングで console に文字が発生するようにします。
+    //resizeは、DOM内にはありませんのでwindowで取得します。
+    window.addEventListener("resize", function () {
+        //ここに処理を書きます。
+        console.log("サイズが変わりました。");
+    });
+</script>```
+
+```html
+<p class="text"><span>色の名前</span>です。</p>
+<button class="red">赤色</button>
+<button class="blue">青色</button>
+<button class="yellow">黄色</button>
+<script>
+    //文字の色を変えてみましょう。
+    //ボタンを取得する
+    const redBtn = document.querySelector(".red");
+    const blueBtn = document.querySelector(".blue");
+    const yellowdBtn = document.querySelector(".yellow");
+    //文字を取得する
+    const text = document.querySelector(".text");
+    const textSpan = document.querySelector(".text span")
+    //ボタンにClikイベントを設定する。
+    redBtn.addEventListener("click", function () {
+        console.dir("text");
+        text.style.color = "red";
+        textSpan.fontSize = "50px"
+        textSpan.innerText = "赤色"
+    })
+    //青
+    blueBtn.addEventListener("click", function () {
+        console.dir("text");
+        text.style.color = "blue";
+        textSpan.innerText = "青色"
+    })
+    //黄色
+    yellowdBtn.addEventListener("click", function () {
+        console.dir("text");
+        text.style.color = "yellow";
+        textSpan.innerText = "黄色"
+    })
+</script>
+<script>
+    //スクロールされるたびにconsoleに「スクロールされました」と表示
+されるプログラムを書いてください。
+    //windowのしごとです。
+    window.addEventListener("scroll", function () {
+        console.log("スクロールされました。")
+    })
+</script>```
+
+```html
+<style>
+    .redText {
+        color: red;
+    }
+    .bigText {
+        font-size: 25px;
+    }
+</style>
+
+<p><span>JavaScript</span>（ジャバスクリプト）とは、プログラミン
+グ言語のひとつである。</p>
+<button class="redder">赤くなる</button>
+<button class="bigger">大きくなる</button>
+<script>
+    //element.setAttribute("class","??")
+    const text = document.querySelector("p span");
+    const btnRed = document.querySelector("redder");
+    const btnBig = document.querySelector("digger");
+    //赤くなるイベント
+    btnRed.addEventListener("click", function () {
+        text.setAttribute("clas", "redText");
+    })
+    //大きくなるイベント
+    btnBig.addEventListener("click", function () {
+        text.setAttribute("class", "bigText");
+    })
+</script>```
