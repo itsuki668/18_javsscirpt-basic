@@ -334,3 +334,120 @@ class="akitaDog" />
         text.setAttribute("class", "bigText");
     })
 </script>```
+
+
+##  11月２日
+```html
+<h1 id="header">ヘッドスピン</h1>
+<div class="btnArea">
+  <div class="button dancing">Let’sダンス</div>
+  <div class="button stop">ストップ</div>
+  <div class="button change">ダンサーチェンジ</div>
+</div>
+<div class="imgArea">
+  <img src="images/dance_breakdance_headspin.png" alt="ブレイクダンサーいらすと" />
+</div>
+<script>
+  //ここに記述します。
+  const danceingBtn = document.querySelector(".dancing");
+  const stopBtn = document.querySelector(".stop");
+  const changeBtn = document.querySelector("change");
+  const dancer = document.querySelector(".imgArea img");
+  danceingBtn.addEventListener("click", function () {
+    dancer.setAttribute("class", "dance");
+  })
+  stopBtn.addEventListener("click", function () {
+    dancer.removeAttribute("class",);
+  })
+  changeBtn.addEventListener("click", function () {
+    dancer.setAttribute("src", "images/ballet_woman.png");
+  });
+</script>```
+
+```html
+<h1 class="title">タイトル</h1>
+<script>
+    //h1_elementの要素を作る
+    const h1_element = document.querySelector("h1");
+    //確認重要
+    console.dir(h1_element);
+    //hasAttribute
+    const has_result = h1_element.hasAttribute("class");
+    console.log(has_result);//ture or fales
+    //getAttribute
+    const get_result = h1_element.getAttribute("class");
+    console.log(get_result);
+    //className
+    h1_element.className = "siteanme";
+    //classlist
+    //addは加えたいとき
+    h1_element.classList.add("w-full")
+    //classlist.remove("class値");//クラスの削除をします。
+    h1_element.classlist.remove("sitename");
+    //elem.classList.toggle("class"); //クラスが存在する場合は削除します。なければ追加します。
+    const body_element = document.body;
+    body_element.addEventListener("click", function () {
+        body_element.classlist.toggle("red");
+    })
+    //elem.classList.contains("class"); //クラスをの有無をチェックし、true/falseを返します。
+    const contains_result = h1_element.classList.contains("sitename");
+    console.log(contains_result);//上で削除しているのでflales
+</script>```
+```html
+<style>
+    body {
+        width: 100%;
+        height: 1000vh;
+    }
+</style>
+
+<script>
+    //カウンターlet counter 0 を使って、ブラウザー内（body）をクリックしたら、consoleに数字が１ずつ加わった数を表示させてみましょう
+    const body_element = document.querySelector("body");
+    let counter = 0;
+    //要素番号は、0,1,2,3,4
+    const color_array = ["pink", "blue", "orange", "green", "tomato"];
+    //クリックイベント
+    body_element.addEventListener("click", function () {
+        /*counter = counter + 1;
+        counter += 1 //複合演算子*/
+        counter++;
+        console.log(counter);
+        /*style.setAttribute("backgrondColor", "color_array");*/
+        body_element.style.backgroundColor = color_array[counter];
+    })
+</script>```
+```html
+<style>
+    .redText {
+        color: red;
+    }
+    .bigText {
+        font-size: 25px;
+    }
+</style>
+
+<p><span>JavaScript</span>（ジャバスクリプト）とは、プログラミング言語のひとつである。</p>
+<button class="redder">赤くなる</button>
+<button class="bigger">大きくなる</button>
+<script>
+    //element.setAttribute("class","??")
+    const text = document.querySelector("p span");
+    const redBtn = document.querySelector(".redder");
+    const bigBtn = document.querySelector(".digger");
+    //赤くなるイベント
+    redBtn.addEventListener("click", function () {
+        text.classList.toggle("redText");
+        if (text.classList.contains("redBtn")) {
+            redBtn.innerText = "赤くなる";
+        }
+        redBtn.innerText = "もとに戻す";
+    })
+    //大きくなるイベント
+    bigBtn.addEventListener("click", function () {
+        text.classList.toggle("bigText");
+        if (text.classList.contains("bigBtn")) {
+            bigBtn.innerText = "大きくなる";
+        }
+        digBtn.innerText = "もとに戻す";
+    })```

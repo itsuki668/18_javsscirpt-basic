@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性の操作</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">タイトル</h1>
+    <script>
+        //h1_elementの要素を作る
+        const h1_element = document.querySelector("h1");
+        //確認重要
+        console.dir(h1_element);
+
+        //hasAttribute
+        const has_result = h1_element.hasAttribute("class");
+        console.log(has_result);//ture or fales
+
+        //getAttribute
+        const get_result = h1_element.getAttribute("class");
+        console.log(get_result);
+
+        //className
+        h1_element.className = "siteanme";
+
+        //classlist
+        //addは加えたいとき
+        h1_element.classList.add("w-full")
+
+        //classlist.remove("class値");//クラスの削除をします。
+        h1_element.classlist.remove("sitename");
+
+        //elem.classList.toggle("class"); //クラスが存在する場合は削除します。なければ追加します。
+        const body_element = document.body;
+        body_element.addEventListener("click", function () {
+            body_element.classlist.toggle("red");
+        })
+
+        //elem.classList.contains("class"); //クラスをの有無をチェックし、true/falseを返します。
+        const contains_result = h1_element.classList.contains("sitename");
+        console.log(contains_result);//上で削除しているのでflales
+
+    </script>
+</body>
+
+</html>
