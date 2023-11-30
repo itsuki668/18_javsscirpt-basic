@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson3</title>
+</head>
+
+<body>
+    <ul>
+        <li>犬</li>
+        <li>猫</li>
+    </ul>
+    <p class="result"></p>
+    <div class="fnArea"></div>
+    <script>
+        const dogBtn = document.querySelector("li");
+        const catBtn = document.querySelector("li:nth-child(2)");
+        const resultArea = document.querySelector(".result");
+        console.log(dogBtn, catBtn);
+
+        const animalCheck = function (animal) {
+            resultArea.textContent = "あなたは" + animal + "派です"
+        }
+        catBtn.addEventListener("click", function () {
+            animalCheck(this.textContent);
+        });
+
+        dogBtn.addEventListener("click", function () {
+            animalCheck(this.textContent);
+        });
+
+        //関数の定義（関数式）
+        const yoshinoya = function (donn, mori, option, enn) {
+            console.log(donn + "の" + mori + option + "で" + enn + "円");
+            console.log(`${donn}の${mori},${option}で${enn}円`)
+        }
+
+        //関数の実行
+        yoshinoya("牛丼", "並盛", "つゆだく", 388); //牛丼の並盛、つゆだくで 388 円
+        yoshinoya("豚丼", "大盛", "たまご", 592); //豚丼の大盛、たまごで 592 円
+
+
+        //引数が配列
+        const sumCard = function (card) {
+            console.log(card);
+            let total = 0;
+            //すべての足す処理
+            for (let i = 0; i < card.length; i++) {
+                total += card[i]; //toral = total + card[i]
+            }
+            console.log(total);
+        };
+
+        //配列
+        const card_list = [1, 2, 3, 4];
+        //関数の実行、引数には配列
+        sumCard(card_list); //10
+
+        const member_list = ["チェウォン", "サクラ", "ユンジン", "カズハ", "ウンチェ"];
+        const mugiwara_list = ["モンキー・D・ルフィ", "ナミ", "ロロノア・ゾロ", "ヴィンスモーク・サンジ", "ウソップ", "トニートニー・チョッパー", "ニコ・ロビン", "フランキー", "ブルック", "ジンベエ"];
+
+        //.functionAreaに上記の要素を<li>で追加する関数
+        const memberArea = document.querySelector(".fnArea");
+        const memberPush = function (members) {
+            //memberAreaにul,liで各メンバーを入れる
+            console.log(members);
+            const ulElm = document.createElement("ul");
+            for (let i = 0; i < members.length; i++) {
+                const liElm = document.createElement("li");
+                liElm.textContent = members[i];
+                console.log(liElm)
+            }
+        }
+
+
+        //関数の実行
+        memberPush(member_list);//LESLAFIMのメンバー
+        memberPush(mugiwara_list);//麦わらの一味
+    </script>
+</body>
+
+</html>
