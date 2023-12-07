@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>関数</title>
 </head>
 
 <body>
@@ -13,7 +13,14 @@
             const c = a + b;
             console.log(c)
         }
-        addition(30, "6");
+        addition(30, "6");//306
+
+        const addition2 = function (a, b) {
+            const c = a * b;
+            return c;//戻り値
+        }
+        const result = addition2(5, 5);
+        console.log(result);
     </script>
 </body>
 

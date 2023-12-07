@@ -451,3 +451,97 @@ class="akitaDog" />
         }
         digBtn.innerText = "もとに戻す";
     })```
+
+    ##  11月２日
+```script
+<script>
+    const addition = function (a, b) {
+        const c = a + b;
+        console.log(c)
+    }
+    addition(30, "6");//306
+    const addition2 = function (a, b) {
+        const c = a * b;
+        return c;//戻り値
+    }
+    const result = addition2(5, 5);
+    console.log(result);
+</script>```
+```html
+<p>ケーキ（450円）の税込価格</p>
+<button class="takeOut">テイクアウト</button>
+<button class="eatIn">イートイン</button>
+<p>税込み価格は、<span class="taxIn"></span>円です。</p>
+<script>
+    const takeOutBtn = document.querySelector(".takeOut");
+    const eatInBtn = document.querySelector(".eatIn");
+    const resultRtn = document.querySelector(".taxIn");
+    const calculation = function (cake, tax) {
+        const result = cake + cake + tax;
+        return result;
+    };
+    takeOutBtn.addEventListener("cick", function () {
+        const price = calculation(cake, 0.08);
+        result.innerHTML = price;
+    });
+    eatInBtn.addEventListener("cick", function () {
+        const result = calculation(cake, 0.1)
+        rersult.innerHTML = price;
+    });```
+    ```html
+    <h1>変数のスコープ</h1>
+<script>
+    ```html
+        <h1>変数のスコープ</h1>
+    <script>
+        const globalData = "hogehoge";//グローバル変数
+        //関数式
+        const foobaa = function () {
+            const localData = "fugafuga";//ローカル変数
+        };
+        console.log(globalData);//表示される
+        console.log(localData);//ローカルスコープなのでエラー
+
+        const globalData = "hogehoge";//グローバル変数
+        const foobaa = function () {
+            const globalData = "fugafuga";//ローカル変数なんだけど、グローバルの変数名と同じ
+            console.log(globalData);//fugafuga　※ローカル変数は、グローバルよりも優先されるかつ、外にはもれない
+        };
+        console.log(globalData);//hogehoge ※グローバル変数
+        //関数の中だけではなく、｛｝（ブロック）内でしか使えない
+        //外に出したいときには
+    </script>```
+```html
+    <h1>変数のスコープ</h1>
+    <script>
+        // グローバル変数の初期化※再代入可能にするためletを使う。
+        let global = "グローバル変数";
+
+        //関数funcの定義
+        const func = function () {
+            //ローカル変数の初期化
+            let local = "ローカル変数";
+            //グローバル変数の表示
+            console.log(global);
+            //ローカル変数の表示
+            console.log(local);
+            global = "グローバル変数を再代入";
+
+            var global = "グローバル変数を再定義";
+            console.log(global);
+        }
+
+        if (global) {
+            var local2 = "varは関数スコープ";
+            let local3 = "letはブロックスコープ";
+        }
+        //関数funcの実行
+        func();
+        //グローバル変数の表示
+        console.log(global);
+        //varは関数スコープなので、if文の外で呼び出せる。
+        console.log(local2);
+        //letはブロックスコープなので、if文の外で呼び出せない。
+        console.log(local3);
+    </script>
+```
