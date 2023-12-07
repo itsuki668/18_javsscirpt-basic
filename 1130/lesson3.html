@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lesson3</title>
+    <style>
+        button {
+            width: 100px;
+            height: 50px;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,14 +18,10 @@
         <li>犬</li>
         <li>猫</li>
     </ul>
+    <button class="lessrafim">ルセラフィム</button>
+    <button class="onepeace">ワンピース</button>
     <p class="result"></p>
     <div class="fnArea"></div>
-    <a href="">
-        <p></p>
-    </a>
-    <a href="">
-        <p></p>
-    </a>
 
     <script>
         const dogBtn = document.querySelector("li");
@@ -84,6 +86,18 @@
 
         //memberAdd(member_list);
         //memberAdd(mugiwara_list);
+
+        const lessrafimBtn = document.querySelector(".lessrafim");
+        const onepeaceBtn = document.querySelector(".onepeace");
+
+        lessrafimBtn.addEventListener("click", function () {
+            console.log("ルセラフィム");
+            memberAdd(member_list);
+        })
+        onepeaceBtn.addEventListener("click", function () {
+            console.log("ワンピース");
+            memberAdd(mugiwara_list);
+        })
     </script>
 </body>
 
