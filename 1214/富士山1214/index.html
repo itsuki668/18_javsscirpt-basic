@@ -78,7 +78,12 @@
       preStep();
     });
 
+    //二秒後にスライドショウ
+    const slideShow = function (func) {
+      setInterval(func, 2000);
+    };
 
+    slideShow(nextStep);
 
 
   </script>

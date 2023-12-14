@@ -545,3 +545,128 @@ class="akitaDog" />
         console.log(local3);
     </script>
 ```
+## 12月１４日（木）
+
+```html
+<h1>動物のスピード</h1>
+<div class="dash">
+    <p>START</p>
+    <p>GOAL</p>
+</div>
+<ul>
+    <li class="dog">イ　ヌ<span>🐕</span></li>
+    <li class="cat">ネ　コ<span>🐈</span></li>
+    <li class="horse">ウ　マ<span>🐎</span></li>
+    <li class="pig">ブ　タ<span>🐖</span></li>
+    <li class="gorilla">ゴリラ<span>🦍</span></li>
+</ul>
+<button class="startBtn">よーい、ドン！</button>
+<script>
+    const startBtn = document.querySelector(".startBtn");
+    const animalSpeed = [3, 4, 1, 3, 2];
+    const animals = document.querySelectorAll("li span");
+    // ここに関数animalsRunを作成してください。
+    const animalsRun = function (list) {
+        for (let i = 0; i < list.length; i++) {
+            console.log(animalSpeed[i], list[i])
+            list[i].classList.add("run");
+            list.style.tarnsitionDuration = animalSpeed[i] +
+                "s";
+        }
+    }
+    //startBtn.addEventListener("click", function () {
+    //    //animalsRun(animals);
+    //    for (let i = 0; i < animals.length; i++) {
+    //    }
+    //});
+    startBtn.addEventListener("click", function () {
+        animalsRun(animals);
+    })
+    //犬を動かす
+    //const dog = document.querySelector(".dog span");
+    //startBtn.addEventListener("click", function () {
+    //    dog.style.transitionDuration = animalSpeed[0] + "s";
+    //    dog.classList.add("run");
+    //});
+</script>
+```
+```js
+        //関数式１
+        const concatenateSpace = function (lastName, firstName) {
+            return lastName + " " + firstName;
+        };
+        //関数式２
+        const useConcatenate = function (name, func) {
+            let concatName = func(name[0], name[1]);
+            console.log("結合結果：" + concatName);
+        };
+
+        let nameParam = ["橋本", "一輝"];//配列
+
+        //関数式２の実行（引数１=配列、引数２=　関数の名前）
+        useConcatenate(nameParam, concatenateSpace);
+
+        //結合結果：中田 雄二
+
+
+        //コールバック関数基本　※よく使う
+        //関数式１
+        const testFunc = function (func) {
+            //funcには、関数式２
+            //関数の実行後のすぐに表示
+            console.log("testFuncが実行されました");
+            //二秒後に表示
+            setTimeout(function () {
+                func();
+            }, 2000);
+        };
+        //関数式２
+        const callback = function () {
+            console.log("callbackが実行されました");
+        };
+        //関数式１を実行
+        //callbackは関数式２の関数名
+        testFunc(callback);
+```
+```html
+    <p>これ</p>
+
+    <script>
+        //従来の関数式
+        const dog = function () {
+            return "わんわん";
+        };
+        //関数の定義
+        function dog2() {
+            return "バウワウ";
+        }
+        console.log(dog()); //わんわん
+        console.log(dog2())
+
+        //アロー関数の関数式　※アロー関数は関数式で使う
+        const cat = () => {
+            return "にゃーにゃー";
+        };
+
+        //鳴き方を決めたい　アロー関数＋引数
+        const animal = (voice) => {
+            return voice;
+        }
+        console.log(animal("みゃあみゃあ"));
+
+
+        console.log(cat()); //にゃーにゃー
+
+        //p
+        //thisは予約語なので変数名、関数名に使えない
+        const thisElm = document.querySelector("p");
+        console.log(thisElm);
+        thisElm.addEventListener("click", (e) => {
+            console.log("クリック")
+            //console.log(this.textContent)
+            console.log(e.target.innerText)
+        });
+
+    </script>
+
+```
