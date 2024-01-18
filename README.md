@@ -670,3 +670,209 @@ class="akitaDog" />
     </script>
 
 ```
+## 1月１8日（木）
+```js
+        const countries = {
+            Japan: "日本",
+            USA: "アメリカ",
+            China: "中国",
+            Korea: "韓国",
+        };
+        console.log(countries.USA);//アメリカがほしい
+        console.log(countries["USA"]);
+
+        //foo...in文
+        for (let county in countries) {
+            console.log(countries[county]);
+        }
+        /*名簿-------------------------------------------------
+        */
+        const meibo_obj = [//[]で囲まれているので、配列
+            { id: "20224", name: "新井太郎" },//{}で囲まれているので、オブジェクト
+            { id: "20031", name: "井上次郎" },//オブジェクトの定義は、key：値
+            { id: "20193", name: "山本花子" }
+        ];
+        //オブジェクトが３つはいっているオブジェクト
+        //配列の要素が全部欲しいfor文
+        for (let i = 0; i < meibo_obj.length; i++) {
+            console.log(meibo_obj[i]);
+            for (let key in meibo_obj[i]) {
+                console.log(meibo_obj[i][key]);
+            }
+        }
+
+        /*野球の本拠地----------------------------------------------
+        */
+        let npbCentral_list = [
+            { team: "東京ヤクルトスワローズ", home: "東京" },
+            { team: "阪神タイガース", home: "大阪" },
+            { team: "読売ジャイアンツ", home: "東京" },
+            { team: "広島東洋カープ", home: "広島" },
+            { team: "中日ドラゴンズ", home: "名古屋" },
+            { team: "横浜DeNAベイスターズ", home: "横浜" },
+        ];
+        //中日ドラゴンズの本拠地をconsole.logで表示する
+
+        console.log(npbCentral_list[4]);
+```
+```html
+    <ul>
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>パイナップル</li>
+    </ul>
+    <script>
+        /*動物ーーーーーーーーーーーーーーーーーーーーーーーーーー
+        */
+        //値を」変更したい場合は添字で指定
+        const animals = ["dog", "cat", "bird"];
+        animals[2] = "lion";
+        console.log(animals);
+
+        animals.push("tiger");
+        console.log(animals.length);//4
+        console.log(animals);
+
+        const fruits = document.querySelectorAll("li");
+        console.log(fruits);
+        // fruits.push("<li>いちご</li>");
+
+
+        animals.unshift("elephant");
+        console.log(animals);
+    </script>
+```
+```html
+    <ul class="junishis"></ul>
+    <script>
+        const junishi = ["丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌"];
+        const twopieces = ["子", "亥"];
+        const junishis = document.querySelector(".junishis");
+
+        junishi.unshift(twopieces[0]);
+        junishi.push(twopieces[1]);
+
+        for (eto of junishi) {
+            const list = document.createElement("li");
+            list.innerHTML = eto;
+            junishis.appendChild(list);
+        }
+
+        const staff = [
+            ["佐藤", 41, "東京"],
+            ["鈴木", 25, "大阪"],
+            ["林", 34, "札幌"],
+        ];
+        for (let i = 0; i < staff.length; i++) {
+            console.log(staff[0]);
+        }
+        for (let j = 0; j < staff[i].length; j++) {
+            console.log(staff[i][j]);
+        }
+    </script>
+```
+```html
+<h1>人気のフルーツ一覧</h1>
+<ul></ul>
+<script>
+    const fruits = ["りんご", "もも", "バナナ"];
+    const ul = document.querySelector("ul");
+    for (let name of fruits) {
+        console.log(name);
+        const li = document.createElement("li");
+        li.innerHTML = name;
+        ul.appendChild(li);
+    }
+</script>
+```
+```html
+    <h1>数字を英語で表現する</h1>
+    <table class="table_nam">
+        <tr>
+            <th>数字</th>
+            <th>英語</th>
+        </tr>
+    </table>
+    <script>
+        const number = ["one", "two", "there", "four", "five"];
+        const tableElm = document.querySelector("table");
+        for (let i = 0; i < number.length; I++) {
+            const trElm = document.createElement("tr");
+            const tdElm = document.createElement("td");
+            tdElm.innerHTML = i;
+
+        }
+
+    </script>
+```
+```html
+    <h1>GAFAMの一覧</h1>
+
+    <table class="table_gafam">
+        <tr>
+            <th>名前</th>
+            <th>運営会社</th>
+            <th>創立年</th>
+            <th>URL</th>
+        </tr>
+    </table>
+    <script>
+        const corporation = [
+            {
+                name: "Google",
+                company: "Alphabet Inc.",
+                founding: 1998,
+                url: "https://www.abc.xyz/",
+            },
+            {
+                name: "Apple",
+                company: "Apple Inc.",
+                founding: 1976,
+                url: "https://www.apple.com/",
+            },
+            {
+                name: "Facebook",
+                company: "Facebook, Inc.",
+                founding: 2004,
+                url: "https://www.meta.com/",
+            },
+            {
+                name: "Amazon",
+                company: "Amazon.com, Inc.",
+                founding: 1994,
+                url: "https://www.amazon.com",
+            },
+            {
+                name: "Microsoft",
+                company: "Microsoft Corporation",
+                founding: 1975,
+                url: "https://www.microsoft.com/",
+            },
+        ];
+
+        const tableElm = document.querySelector(".table_gafam");
+
+        for (let co of corporation) {
+            const trElm = document.createElement("tr");
+            console.log(co);
+            tableElm.appendChild(trElm)
+            for (let key in co) {
+                console.log(key);
+                const tdElm = document.createElement("td");
+                tdElm.innerHTML = co[key];
+                trElm.appendChild(tdElm);
+            }
+        }
+
+
+
+        //練習問題４−１　p183
+        const array = [];
+        array.push(1);
+        array.push(2);
+        array.push(3);
+        for (let num of array) {
+            console.log(num);
+        }
+    </script>
+```

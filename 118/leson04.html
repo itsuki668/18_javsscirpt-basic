@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>人気のフルーツ一覧</h1>
+    <ul></ul>
+    <script>
+        const fruits = ["りんご", "もも", "バナナ"];
+        const ul = document.querySelector("ul");
+        for (let name of fruits) {
+            console.log(name);
+            const li = document.createElement("li");
+            li.innerHTML = name;
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>数字を英語で表現する</h1>
+    <table class="table_nam">
+        <tr>
+            <th>数字</th>
+            <th>英語</th>
+        </tr>
+    </table>
+    <script>
+        const number = ["one", "two", "there", "four", "five"];
+        const tableElm = document.querySelector("table");
+        for (let i = 0; i < number.length; I++) {
+            const trElm = document.createElement("tr");
+            const tdElm = document.createElement("td");
+            tdElm.innerHTML = i;
+
+        }
+
+    </script>
+</body>
+
+</html>

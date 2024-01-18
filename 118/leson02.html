@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配列の操作
+    </title>
+</head>
+
+<body>
+    <ul>
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>パイナップル</li>
+    </ul>
+    <script>
+        /*動物ーーーーーーーーーーーーーーーーーーーーーーーーーー
+        */
+        //値を」変更したい場合は添字で指定
+        const animals = ["dog", "cat", "bird"];
+        animals[2] = "lion";
+        console.log(animals);
+
+        animals.push("tiger");
+        console.log(animals.length);//4
+        console.log(animals);
+
+        const fruits = document.querySelectorAll("li");
+        console.log(fruits);
+        // fruits.push("<li>いちご</li>");
+
+
+        animals.unshift("elephant");
+        console.log(animals);
+    </script>
+</body>
+
+</html>
