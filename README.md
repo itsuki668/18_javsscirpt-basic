@@ -876,3 +876,43 @@ class="akitaDog" />
         }
     </script>
 ```
+##1月25日
+```js
+    const npb2023 = [
+            { Team: "阪神タイガース", Wins: 85, Loss: 53, Ties: 5, Rate: 0.616 },
+            { Team: "広島東洋カープ", Wins: 74, Loss: 65, Ties: 4, Rate: 0.532 },
+            { Team: "横浜DeNAベイスターズ", Wins: 74, Loss: 66, Ties: 3, Rate: 0.529 },
+            { Team: "読売ジャイアンツ", Wins: 71, Loss: 70, Ties: 2, Rate: 0.504 },
+            { Team: "東京ヤクルトスワローズ", Wins: 57, Loss: 83, Ties: 3, Rate: 0.407 },
+            { Team: "中日ドラゴンズ", Wins: 56, Loss: 82, Ties: 5, Rate: 0.406 },
+        ];
+        for (let team of npb2023) {
+            console.log(team);
+        }
+
+```
+```js
+        const n0w = new Date();
+        console.log(now);
+
+        const day = ["日", "月", "火", "水", "木", "金"];
+        console.log(day[now.getDay()]);
+
+        const promotionDay = now Date("2023-2-8");
+        console.log(promotionDay - now);
+        const difference = promotionDay - now;
+
+        const secnds = difference / 1000;
+        console.log(secnds);
+
+        const minites = secnds / 60;
+        console.log(minites);
+
+        const hours = minites / 60;
+        console.log(hours);
+
+        const days = hours / 24;
+        console.log(days);
+
+
+```
