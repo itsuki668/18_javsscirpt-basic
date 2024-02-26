@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>小学生が将来なりたい職業ランキング</h1>
+    <div class="fnArea"></div>
+
+    <script>
+        const conditionsElement = document.getElementById("conditions");
+
+        const ranking_list = ["サッカー選手・監督", "野球選手・監督", "医者", "ユーチューバー"];
+        const olArea = document.createElement("ol");
+        for (let i = 0; i < ranking_list.length; i++) {
+            const list = document.createElement("li");
+            list.textContent = ranking_list[i];
+            olArea.appendChild(list);
+        }
+        document.querySelector(".fnArea").appendChild(olArea);
+
+    </script>
+</body>
+
+</html>

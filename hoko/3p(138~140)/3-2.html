@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-2</title>
+</head>
+
+<body>
+    <P id="conditions"></P>
+
+    <script>
+        let num = 1;
+        const conditionsElement = document.getElementById("conditions");
+
+        switch (num) {
+            case 1:
+                conditionsElement.innerHTML = "<P>numは1です。</P>";
+                break;
+            case 2:
+                conditionsElement.innerHTML = "<P>numは2です。</P>";
+                break;
+            case 3:
+                conditionsElement.innerHTML = "<P>numは3です。</P>";
+                break;
+            default:
+                conditionsElement.innerHTML = "<P>numは1,2,3以外の数です。</P>";
+                break;
+
+        }
+    </script>
+</body>
+
+</html>
