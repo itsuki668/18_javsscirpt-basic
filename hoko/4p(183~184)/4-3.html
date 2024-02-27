@@ -15,18 +15,20 @@
             <th>国名</th>
             <th>人口（億人）</th>
         </tr>
+
+        <script>
+            let ranking_list = {
+                chaina: [1, "中国", 14.48],
+                indo: [2, "インド", 14.06],
+                Indonesia: [3, "インドネシア", 2.79]
+            }
+            const tableelment = document.querySelector("table");
+            for (let key in ranking_list) {
+                tableelment.insertAdjacentHTML("beforeend", "<tr><td>" + ranking_list[key][0] + "</td><td>" + ranking_list[key][1] + "</td><td>" + ranking_list[key][2] + "</td></tr>");
+                console.log(ranking_list[key]);
+            }
+        </script>
     </table>
-    <script>
-        let ranking = [
-            ["1", "中国", "14.48"],
-            ["2", "インド", "14.48"],
-            ["3", "インドネシア", "14.48"]
-        ];
-        const trelemnt = document.querySelector("tr");
-        for (let i = 0; i < ranking.length; i++) {
-            trelemnt.insertAdjacentHTML("beforeend", "<td>" + ranking[0] + "</td> ", "<td>" + ranking[1] + "</td>", "<td>" + ranking[2], "</td>");
-        }
-    </script>
 </body>
 
 </html>

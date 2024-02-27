@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-3見本</title>
+</head>
+
+<body>
+    <h1>国の一覧</h1>
+    <table border="1" style="border-collapse: collapse">
+        <tr>
+            <th>英語の国名</th>
+            <th>日本の国名</th>
+        </tr>
+        <script>
+            let countries = {
+                Japan: "日本",
+                USA: "アメリカ",
+                China: "中国",
+                Korea: "韓国"
+            };
+            const tableelment = document.querySelector("table")
+            for (let kye in countries) {
+                tableelment.insertAdjacentHTML("beforeend", "<tr><td>" + kye + "</td><td>" + countries[kye] + "</td></tr> ");
+
+
+            }
+        </script>
+
+    </table>
+</body>
+
+</html>

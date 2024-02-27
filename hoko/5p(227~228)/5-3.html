@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-3
+    </title>
+</head>
+
+<body>
+    <h1>住みたい街ランキング</h1>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>順位</th>
+            <th>住みたい街</th>
+            <th>都道府県</th>
+        </tr>
+        <script>
+            let ranking_list = [
+                [1, "横浜市", "神奈川県"],
+                [2, "札幌市", "北海道"],
+                [3, "福岡市", "静岡県"],
+                [4, "名古屋市", "愛知県"],
+                [5, "世田谷区", "東京都"],
+            ];
+            const tableelment = document.querySelector("table");
+            ranking_list.forEach(function (data) {
+                console.log(data);
+                tableelment.insertAdjacentHTML("beforeend", "<tr><td>" + data[0] + "</td><td>" + data[1] + "</td><td>" + data[2] + "</td></tr>")
+                //tableelment.insertAdjacentHTML("beforeend", "<tr>")
+                //data.forEach(function (item) {
+                //    tableelment.insertAdjacentHTML("beforeend", "<td>" + item + "</td>");
+                //
+                //});
+                //tableelment.insertAdjacentHTML("beforeend", "</tr>")
+
+            });
+        </script>
+    </table>
+</body>
+
+</html>

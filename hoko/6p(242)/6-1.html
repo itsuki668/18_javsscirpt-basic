@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-1
+    </title>
+</head>
+
+<body>
+    <h1>計算オブジェクト</h1>
+    <script>
+        let calc = {
+            a: 0,
+            b: 0,
+
+            add: function () {
+                let ans = this.a + this.b;
+                return ans;
+            },
+            sub: function () {
+                let ans = this.a - this.b;
+                return ans;
+            },
+            kake: function () {
+                let ans = this.a * this.b;
+                return ans;
+            },
+            wari: function () {
+                let ans = this.a / this.b;
+                return ans;
+            }
+        }
+
+        calc.a = 10;
+        calc.b = 5;
+        const bodyelment = document.querySelector("body");
+        bodyelment.insertAdjacentHTML("beforeend", "<p>a=" + calc.a + "</p>");
+        bodyelment.insertAdjacentHTML("beforeend", "<p>a=" + calc.b + "</p>");
+        bodyelment.insertAdjacentHTML("beforeend", "<p>a+b=" + calc.add() + "</p>");
+        bodyelment.insertAdjacentHTML("beforeend", "<p>a-b=" + calc.sub() + "</p>");
+        bodyelment.insertAdjacentHTML("beforeend", "<p>a×b=" + calc.kake() + "</p>");
+        bodyelment.insertAdjacentHTML("beforeend", "<p>a÷b=" + calc.wari() + "</p>");
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

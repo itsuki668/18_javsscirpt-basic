@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-1</title>
+</head>
+
+<body>
+    <h1>最小値を求める関数</h1>
+    <script>
+        function minNumber(n1, n2) {
+            if (n1 < n2) {
+                return n1;
+            }
+            return n2;
+        }
+        let num1 = 11;
+        let num2 = 16;
+        let n = minNumber(num1, num2);
+
+        const bodyelment = document.querySelector("body");
+        bodyelment.insertAdjacentHTML("beforeend", "<p>" + num1 + "と" + num2 + "のうち小さい値は" + n + "です。</p>")
+    </script>
+</body>
+
+</html>

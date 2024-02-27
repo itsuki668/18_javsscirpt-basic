@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-1</title>
+</head>
+
+<body>
+    <h1>人気のフルーツ一覧</h1>
+    <ul>
+        <script>
+            let fruits = ["りんご", "もも", "バナナ"];
+            let ulelment = document.querySelector("ul");
+            //ulelment.insertAdjacentHTML("beforeend", "<li>" + fruits[0] + "</li><li>" + fruits[1] + "</li><li>" + fruits[2] + "</li>");
+            for (let i = 0; i < fruits.length; i++) {
+                ulelment.insertAdjacentHTML("beforeend", "<li>" + fruits[i] + "</li>");
+            }
+        </script>
+    </ul>
+</body>
+
+</html>

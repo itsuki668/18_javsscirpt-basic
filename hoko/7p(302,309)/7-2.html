@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-2</title>
+</head>
+
+<body>
+    <h1>メッセージの変換</h1>
+    <P id="msg">ボタンを押してください</P>
+    <input type="button" value="ボタン" id="btn">
+    <script>
+        let msgelment = document.getElementById("msg");
+        const btn = document.querySelector("#btn");
+
+        btn.addEventListener("click", showMessage);
+
+        function showMessage() {
+            msgelment.textContent = "ボタンが押されました。"
+        }
+    </script>
+</body>
+
+</html>
